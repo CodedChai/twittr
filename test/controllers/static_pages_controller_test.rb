@@ -2,8 +2,13 @@ require 'test_helper'
 
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   
-   def setup
+  def setup
     @base_title = "Twittr"
+  end
+  
+  test "should get root" do
+    get root_url
+    assert_response :success
   end
   
   test "should get home" do
