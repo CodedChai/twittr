@@ -1,15 +1,26 @@
 orange:
   content: "I just ate an orange!"
   created_at: <%= 10.minutes.ago %>
-
+  user: connor
+  
 leia:
   content: "Help me Obi-Wan Kenobi!"
   created_at: <%= 3.years.ago %>
+  user: connor
 
 covfefe:
   content: "covfefe"
   created_at: <%= 2.hours.ago %>
+  user: connor
 
 most_recent:
   content: "Writing a short test"
   created_at: <%= Time.zone.now %>
+  user: connor
+  
+<% 30.times do |n| %>
+micropost_<%= n %>:
+  content: <%= Faker::Lorem.sentence(5) %>
+  created_at: <%= 42.days.ago %>
+  user: connor
+<% end %>
